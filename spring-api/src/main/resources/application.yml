@@ -1,0 +1,28 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: spring-api
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/spring?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    username: root
+    password: hjXL327918
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 2
+#    type: com.zaxxer.hikari.HikariDataSource
+#    hikari:
+#        maximum-pool-size: 100
+#        minimum-idle: 30
+
+pagehelper:
+  helper-dialect: mysql
+# 可将 com.leitan.springapi.dao 包下的接口的SQL语句输出到控制台
+logging:
+  level:
+    com:
+      leitan:
+        springapi:
+          dao: debug
